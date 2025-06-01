@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}URL Checker{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>URL Checker</h1>
+    <form method="POST" action="/check_urls">
+        <div class="mb-3">
+            <label for="urls" class="form-label">Enter URLs (comma-separated)</label>
+            <textarea class="form-control" id="urls" name="urls" rows="3" placeholder="Enter multiple URLs separated by commas."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Check URLs</button>
+    </form>
+    <div class="mt-4">
+        <a href="/history" class="btn btn-secondary">View History</a>
+    </div>
+</div>
+{% endblock %}

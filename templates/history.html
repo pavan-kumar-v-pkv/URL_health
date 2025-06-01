@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}URL Check History{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>URL Check History</h1>
+        <a href="/" class="btn btn-primary">Back to URL Checker</a>
+    </div>
+    
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>URL</th>
+                    <th>Status</th>
+                    <th>Response Time (ms)</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for check in checks %}
+                <tr>
+                    <td>{{ check.id }}</td>
+                    <td>{{ check.url }}</td>
+                    <td>
+                        {% if check.status == 'UP' %}
+                            <span class="badge bg-success">{{ check.status }}</span>
+                        {% elif check.status == 'AUTH_REQUIRED' %}
+                            <span class="badge bg-warning">{{ check.status }}</span>
+                        {% elif check.status == 'RATE_LIMITED' %}
+                            <span class="badge bg-warning">{{ check.status }}</span>
+                        {% else %}
+                            <span class="badge bg-danger">{{ check.status }}</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if check.response_time %}
+                            {% if check.response_time >= 1000 %}
+                                {{ "%.1f"|format(check.response_time/1000) }} s
+                            {% else %}
+                                {{ "%.1f"|format(check.response_time) }} ms
+                            {% endif %}
+                        {% else %}
+                            <span class="text-danger">Timeout</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ check.timestamp.strftime('%Y-%m-%d %I:%M:%S %p') }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
