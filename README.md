@@ -43,6 +43,7 @@ Open your web browser and navigate to http://localhost:5001 to access the applic
 
 4. Use the web interface to enter URLs and check their health status.
 
+## 
 ## Project Structure
 
 - app.py: The main application file.
@@ -63,7 +64,8 @@ Open your web browser and navigate to http://localhost:5001 to access the applic
 ![](screenshots/history.png)
 
 
-Author
-Pavan Kumar V
-Email: pavankumarvpkv@gmail.com
-GitHub: pavan-kumar-v-pkv
+## Author
+
+- Name: Pavan Kumar V
+- Email: pavankumarvpkv@gmail.com
+- GitHub: [pavan-kumar-v-pkv](https://github.com/pavan-kumar-v-pkv)
