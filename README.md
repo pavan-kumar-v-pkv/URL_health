@@ -51,6 +51,18 @@ Open your web browser and navigate to http://localhost:5001 to access the applic
 - docker-compose.yml: The Docker Compose file.
 - Dockerfile: The Dockerfile.
 
+## Screenshots
+
+### Main Page
+![](screenshots/homepage.png.png)
+
+### Results Page
+![](screenshots/results.png.png)
+
+### History Page
+![](screenshots/history.png.png)
+
+
 Author
 Pavan Kumar V
 Email: pavankumarvpkv@gmail.com
