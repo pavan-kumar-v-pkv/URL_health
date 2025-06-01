@@ -51,10 +51,12 @@ with app.app_context():
 
 @app.route('/')
 def home():
+    # Show the main URL input page
     return render_template('index.html')
 
 @app.route('/history')
 def history():
+    # Show the history of URL checks
     try:
         checks = URLCheck.query.order_by(URLCheck.timestamp.desc()).all()
         logger.info(f"Fetched {len(checks)} URL checks from database")
