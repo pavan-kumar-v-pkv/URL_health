@@ -54,13 +54,13 @@ Open your web browser and navigate to http://localhost:5001 to access the applic
 ## Screenshots
 
 ### Main Page
-![](screenshots/homepage.png.png)
+![](screenshots/homepage.png)
 
 ### Results Page
-![](screenshots/results.png.png)
+![](screenshots/results.png)
 
 ### History Page
-![](screenshots/history.png.png)
+![](screenshots/history.png)
 
 
 Author
